@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+.card{
+    position: relative;
+    margin-bottom: 2rem;
+    height: 15rem;
+    width: 18rem;
+    animation: card_entry .5s 1;
+    gap: .5rem;
+    border: 1px solid rgb(220, 215, 215);
+    border-radius: 20px;
+}
+
+.stock_button{
+    display: flex;
+    /* border: 2px solid black; */
+    justify-content: flex-end;
+    width: 20rem;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    margin-top: 1rem;
+}
+
+
+

@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');*{ 
+    margin: 0px;
+    padding: 0px;
+}
+
+.main{
+    height: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#left{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+}
+
+.btn button{
+    border-radius: 50%;
+    background-color: #CDF0EA;
+    color: black;
+    border: none;
+    padding: .6rem;
+
+}
+
+.btn button:hover{
+    background-color: #ECC5FB;
+}
+
+
+.btn button::after{
+    content: none;
+}
+
+.btn .dropdown_items{
+    padding: 1rem;    
+}
+
+.btn a{
+    text-decoration: none;
+    color: black;
+}
+
+

@@ -1,0 +1,243 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* have to made it because in the orginal card i added animation and it was also showing in the loading screen if i let it there */
+.loading_card{
+    margin-bottom: 2rem;
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card{
+    margin-bottom: 2rem;
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: card_entry .5s 1;
+}
+
+@keyframes card_entry {
+    from {transform: scale(0);  
+    }
+    to {transform: scale(1);}
+  }
+
+.heading{
+    position: absolute;
+    font-weight: 550;
+    font-family: 'Libre Baskerville', serif;
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.8); 
+    color: #f1f1f1; 
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+.add_item{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+.card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    opacity: .5;
+
+}
+
+.modal_main_wrap{
+    padding: 2rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.modal_components{
+    margin-bottom: 1rem;
+}
+
+
+#modal_item_1{
+    font-size: 1.2rem;
+    font-weight: 650;
+}
+
+#modal_item_2{
+    font-weight: 550;
+}
+
+#modal_item_4{
+    margin-bottom: .5rem;
+}
+
+#modal_item_5 input{
+    border: 1px solid rgb(207, 204, 204);
+    border-radius: 5px;
+    text-indent: .5rem;
+    padding: .2rem;
+}
+
+#modal_item_5 input:focus{
+    outline: none;
+}
+
+#modal_item_6{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.added_images{
+    min-height: 100%;
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.added_images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.image_cross{
+    position: absolute;
+    right: -5px;
+    top: -10px;
+}
+
+.add_image_button{
+    width: fit-content;
+    border-radius: 5px;
+    background-color: #ADD8E6;
+    padding: .5rem;
+    margin-right: 1rem;
+    color: black;
+}
+
+#modal_item_8{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.modal_final_buttons{
+    padding: .5rem 1.5rem .5rem 1.5rem;
+    border-radius: 5px;
+}
+
+#cancel_button{
+    background-color: #F9F9F9;
+}
+
+#save_button{
+    background-color: #0F1730;
+    color: white;
+}
+
+.loading_screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    font-family: 'Roboto Slab', serif;
+    color: #7743DB;
+    font-weight: 600;
+    position: relative;
+}
+
+.loading_text:after {
+    position: absolute;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+    animation: ellipsis steps(4,end) 900ms infinite;
+    content: "\2026"; /* ascii code for the ellipsis character */
+    width: 0px;
+  }
+  
+  @keyframes ellipsis {
+    to {
+      width: 1.25em;    
+    }
+  }
+  
+  @-webkit-keyframes ellipsis {
+    to {
+      width: 1.25em;    
+    }
+  }
+
+.loading_screen img{
+    width: 50%;
+    height: 50%;
+}
+
+.done{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.done img{
+    width: 20%;
+    height: 20%;
+    border: 5px solid #43A047;
+    border-radius: 50%;
+
+}
+
+.close{
+    padding: .3rem 2rem .3rem 2rem;
+    background-color: #0F1730;
+    border-radius: 10px;
+    color: white;
+}
+
+/* #added_images{
+    border: 2px solid black;
+    padding: .8rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+#added_images img{
+    max-width: 100%;
+    object-fit: contain;
+}
+
+#modal_images{
+    height: 100%;
+} */
+
+/* .image_cross{
+    position: absolute;
+    top: 0px;
+} */
