@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import login_css from '../login/login.module.css'
-import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
@@ -24,11 +23,10 @@ function Login() {
       };
     
       const login_req = async(e) => {
-        console.log('entered here')
         e.preventDefault();
               const {username,password} = user_values;
     
-              const res = await fetch('/signin',{
+              const res = await fetch('//signin',{
                   method:'POST',
                   headers:{
                       'Content-Type' : 'application/json',
@@ -45,14 +43,12 @@ function Login() {
               const {message , status} = data
     
               if(status === 442 ){
-                console.log(message)
                 setalert_message({message:message , display:'block'});
                 setalert_box(true)
               }
     
               else if(status === 201){
                 localStorage.setItem('token', data.token);
-                console.log(message)
                 Navigate('/categories')
               }
     

@@ -1,8 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import {useParams} from 'react-router-dom'
 import itemcss from '../items/items.module.css'
-import sample_image from '../../images/foundation.png'
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
@@ -22,18 +20,6 @@ function Items() {
   const [outstock, setoutstock] = useState([])
   const [stock_state, setstock_state] = useState({message:'In Stock' , status:true})
   let loading_cards = [1,2,3]
-
-  const style = {
-    position: 'absolute' ,
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    pt: 2,
-    px: 4,
-    pb: 3,
-  };
 
   const item_data = async() =>{
     const res = await fetch('/item_data',{

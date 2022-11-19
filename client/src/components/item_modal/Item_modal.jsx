@@ -15,7 +15,6 @@ import { useDispatch } from 'react-redux'
 import { change_stock } from '../Redux/update_stock_state';
 
 function Item_modal({categories , handle_modal ,type , messages}) {
-  console.log(type)
     let category_data = categories
     const dispatch = useDispatch();
     const [item_images, setitem_images] = useState([])
@@ -44,19 +43,16 @@ function Item_modal({categories , handle_modal ,type , messages}) {
     const handleChange = (e) => {
         const name= e.target.name;
         const value = e.target.value
-        console.log(name, value)
         setitem_info({...item_info , [name]:value});
         };
 
     const save_images = (e)=>{
         let file_path = e.target.files
-        console.log(file_path[1])
 
         let item_images_preview_2 = []
         let item_images_2 = []
 
         for (let index = 0; index < file_path.length; index++) {
-          console.log(index)
           if(file_path!=undefined){
             item_images_preview_2.push(URL.createObjectURL(file_path[index]))
             item_images_2.push(file_path[index])
@@ -80,7 +76,6 @@ function Item_modal({categories , handle_modal ,type , messages}) {
     }
 
     const update_item = async()=>{
-      console.log(messages)
 
       let instock_final_value = true
 
@@ -118,7 +113,6 @@ function Item_modal({categories , handle_modal ,type , messages}) {
           const file_url = await uploadFileToBlob(item_images[i]);
           image_urls.push(file_url)
         }
-        console.log(localStorage.getItem('token'),'this is jwt')
         
         const res = await fetch('/save_item',{
             method:'POST',

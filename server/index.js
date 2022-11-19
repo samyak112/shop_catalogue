@@ -2,13 +2,14 @@ const express = require('express')
 const app = express()
 const http = require('http')
 require('dotenv').config()
-const body_parser = require('body-parser');
+const cors = require('cors')
 const port = process.env.PORT || 3080;
 const nodemailer = require('nodemailer');
 const jwt = require('jsonwebtoken')
 
-app.use(body_parser.json());
-app.use(body_parser.urlencoded({ extended: false }));
+app.use(cors())
+app.use(express.json({limit:'10kb'}))
+app.use(express.urlencoded({extended:true,limit:'10kb'}))
 const server = http.createServer((req, res) => {
   console.log('hellow world')
 })

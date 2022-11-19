@@ -4,7 +4,6 @@ import Categories from '../categories/Categories'
 import Navbar from '../navbar/Navbar'
 
 function Dashboard(props) {
-  console.log(props)
   return (
     <>
         this is dashboard

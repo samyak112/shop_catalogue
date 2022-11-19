@@ -58,7 +58,6 @@ const createBlobInContainer = async (containerClient: ContainerClient, file: Fil
 
 // <snippet_uploadFileToBlob>
 const uploadFileToBlob = async (file: File | null): Promise<string[]> => {
-  // console.log('entered herer')
   if (!file) return [];
 
   // get BlobService = notice `?` is pulled out of sasToken - if created in Azure portal
@@ -77,7 +76,6 @@ const uploadFileToBlob = async (file: File | null): Promise<string[]> => {
   const file_url_final = await createBlobInContainer(containerClient, file);
 
 
-  console.log(file_url_final)
   // get list of blobs in container
   return file_url_final;
 
